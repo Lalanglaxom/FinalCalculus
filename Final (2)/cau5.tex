@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+
+\geometry{margin=2.5cm}
+
+\title{\textbf{BÀI TẬP GIẢI TÍCH}}
+\author{Họ và tên: .............................}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%========================================
+% CÂU 5
+%========================================
+\section*{Câu 5. Cho đạo hàm $f'(x) = (\sin x + \cos x)(\sin x - \cos x)$, $0 \leq x \leq 2\pi$ (1.0 điểm)}
+
+\textbf{Kiến thức cần nhớ:}
+\begin{itemize}
+    \item Điểm tới hạn (critical points): là điểm mà $f'(x) = 0$ hoặc $f'(x)$ không xác định
+    \item Hàm số đồng biến khi $f'(x) > 0$
+    \item Hàm số nghịch biến khi $f'(x) < 0$
+    \item Cực đại: $f'(x)$ đổi dấu từ $+$ sang $-$
+    \item Cực tiểu: $f'(x)$ đổi dấu từ $-$ sang $+$
+\end{itemize}
+
+\bigskip
+
+\textbf{Bước 0:} Rút gọn $f'(x)$
+
+\begin{align*}
+    f'(x) &= (\sin x + \cos x)(\sin x - \cos x) \\
+    &= \sin^2 x - \cos^2 x \\
+    &= -(\cos^2 x - \sin^2 x) \\
+    &= -\cos 2x
+\end{align*}
+
+Vậy $f'(x) = -\cos 2x$
+
+\bigskip
+
+%----------------------------------------
+% Câu 5a
+%----------------------------------------
+\subsection*{a) Tìm các điểm tới hạn (critical numbers)}
+
+\textbf{Giải:}
+
+Điểm tới hạn là nghiệm của phương trình $f'(x) = 0$:
+\begin{align*}
+    f'(x) &= 0 \\
+    -\cos 2x &= 0 \\
+    \cos 2x &= 0 \\
+    2x &= \frac{\pi}{2} + k\pi, \quad k \in \mathbb{Z} \\
+    x &= \frac{\pi}{4} + \frac{k\pi}{2}, \quad k \in \mathbb{Z}
+\end{align*}
+
+Với điều kiện $0 \leq x \leq 2\pi$, ta tìm các giá trị của $k$:
+\begin{itemize}
+    \item $k = 0$: $x = \dfrac{\pi}{4}$ \checkmark
+    \item $k = 1$: $x = \dfrac{\pi}{4} + \dfrac{\pi}{2} = \dfrac{3\pi}{4}$ \checkmark
+    \item $k = 2$: $x = \dfrac{\pi}{4} + \pi = \dfrac{5\pi}{4}$ \checkmark
+    \item $k = 3$: $x = \dfrac{\pi}{4} + \dfrac{3\pi}{2} = \dfrac{7\pi}{4}$ \checkmark
+    \item $k = 4$: $x = \dfrac{\pi}{4} + 2\pi = \dfrac{9\pi}{4} > 2\pi$ (loại)
+\end{itemize}
+
+\textbf{Kết luận:} Các điểm tới hạn là: $\boxed{x = \dfrac{\pi}{4}, \dfrac{3\pi}{4}, \dfrac{5\pi}{4}, \dfrac{7\pi}{4}}$
+
+\bigskip
+
+%----------------------------------------
+% Câu 5b
+%----------------------------------------
+\subsection*{b) Tìm các khoảng đồng biến và nghịch biến của $f$}
+
+\textbf{Giải:}
+
+Ta xét dấu của $f'(x) = -\cos 2x$ trên $[0, 2\pi]$:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$x$ & $\left(0, \dfrac{\pi}{4}\right)$ & $\left(\dfrac{\pi}{4}, \dfrac{3\pi}{4}\right)$ & $\left(\dfrac{3\pi}{4}, \dfrac{5\pi}{4}\right)$ & $\left(\dfrac{5\pi}{4}, \dfrac{7\pi}{4}\right)$ & $\left(\dfrac{7\pi}{4}, 2\pi\right)$ \\
+\hline
+$2x$ & $\left(0, \dfrac{\pi}{2}\right)$ & $\left(\dfrac{\pi}{2}, \dfrac{3\pi}{2}\right)$ & $\left(\dfrac{3\pi}{2}, \dfrac{5\pi}{2}\right)$ & $\left(\dfrac{5\pi}{2}, \dfrac{7\pi}{2}\right)$ & $\left(\dfrac{7\pi}{2}, 4\pi\right)$ \\
+\hline
+$\cos 2x$ & $+$ & $-$ & $+$ & $-$ & $+$ \\
+\hline
+$f'(x) = -\cos 2x$ & $-$ & $+$ & $-$ & $+$ & $-$ \\
+\hline
+$f(x)$ & $\searrow$ & $\nearrow$ & $\searrow$ & $\nearrow$ & $\searrow$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Kết luận:}
+
+\begin{itemize}
+    \item Hàm số \textbf{đồng biến} trên các khoảng: $\boxed{\left(\dfrac{\pi}{4}, \dfrac{3\pi}{4}\right) \text{ và } \left(\dfrac{5\pi}{4}, \dfrac{7\pi}{4}\right)}$
+    
+    \item Hàm số \textbf{nghịch biến} trên các khoảng: $\boxed{\left(0, \dfrac{\pi}{4}\right), \left(\dfrac{3\pi}{4}, \dfrac{5\pi}{4}\right) \text{ và } \left(\dfrac{7\pi}{4}, 2\pi\right)}$
+\end{itemize}
+
+\bigskip
+
+%----------------------------------------
+% Câu 5c
+%----------------------------------------
+\subsection*{c) Tìm các điểm cực đại và cực tiểu địa phương}
+
+\textbf{Giải:}
+
+Dựa vào bảng xét dấu ở trên:
+
+\textbf{Điểm cực tiểu địa phương:}
+
+Tại các điểm mà $f'(x)$ đổi dấu từ $-$ sang $+$:
+\begin{itemize}
+    \item Tại $x = \dfrac{\pi}{4}$: $f'(x)$ đổi dấu từ $-$ sang $+$ $\Rightarrow$ \textbf{cực tiểu}
+    \item Tại $x = \dfrac{5\pi}{4}$: $f'(x)$ đổi dấu từ $-$ sang $+$ $\Rightarrow$ \textbf{cực tiểu}
+\end{itemize}
+
+\textbf{Điểm cực đại địa phương:}
+
+Tại các điểm mà $f'(x)$ đổi dấu từ $+$ sang $-$:
+\begin{itemize}
+    \item Tại $x = \dfrac{3\pi}{4}$: $f'(x)$ đổi dấu từ $+$ sang $-$ $\Rightarrow$ \textbf{cực đại}
+    \item Tại $x = \dfrac{7\pi}{4}$: $f'(x)$ đổi dấu từ $+$ sang $-$ $\Rightarrow$ \textbf{cực đại}
+\end{itemize}
+
+\textbf{Kết luận:}
+\begin{itemize}
+    \item Hàm số đạt \textbf{cực tiểu địa phương} tại: $\boxed{x = \dfrac{\pi}{4} \text{ và } x = \dfrac{5\pi}{4}}$
+    \item Hàm số đạt \textbf{cực đại địa phương} tại: $\boxed{x = \dfrac{3\pi}{4} \text{ và } x = \dfrac{7\pi}{4}}$
+\end{itemize}
+
+\bigskip
+
+%----------------------------------------
+% Bảng tóm tắt câu 5
+%----------------------------------------
+\subsection*{Bảng tóm tắt kết quả Câu 5:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Yêu cầu} & \textbf{Kết quả} \\
+\hline
+Điểm tới hạn & $x = \dfrac{\pi}{4}, \dfrac{3\pi}{4}, \dfrac{5\pi}{4}, \dfrac{7\pi}{4}$ \\
+\hline
+Khoảng đồng biến & $\left(\dfrac{\pi}{4}, \dfrac{3\pi}{4}\right)$ và $\left(\dfrac{5\pi}{4}, \dfrac{7\pi}{4}\right)$ \\
+\hline
+Khoảng nghịch biến & $\left(0, \dfrac{\pi}{4}\right)$, $\left(\dfrac{3\pi}{4}, \dfrac{5\pi}{4}\right)$, $\left(\dfrac{7\pi}{4}, 2\pi\right)$ \\
+\hline
+Điểm cực tiểu địa phương & $x = \dfrac{\pi}{4}$ và $x = \dfrac{5\pi}{4}$ \\
+\hline
+Điểm cực đại địa phương & $x = \dfrac{3\pi}{4}$ và $x = \dfrac{7\pi}{4}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

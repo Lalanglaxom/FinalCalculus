@@ -1,0 +1,217 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+
+\geometry{margin=2.5cm}
+
+\title{\textbf{BÀI TẬP GIẢI TÍCH}}
+\author{Họ và tên: .............................}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%========================================
+% CÂU 9
+%========================================
+\section*{Câu 9. Bài toán doanh thu bán tai nghe (1.0 điểm)}
+
+\textbf{Đề bài:}
+
+Một nghìn tai nghe được bán với giá \$55 mỗi chiếc, tạo ra doanh thu $(1000)(\$55) = \$55,000$.
+
+Với mỗi lần tăng giá \$5, số lượng tai nghe bán được giảm 20 chiếc.
+
+Ví dụ:
+\begin{itemize}
+    \item Giá \$60/chiếc $\Rightarrow$ bán được $1000 - 20 = 980$ chiếc
+    \item Giá \$65/chiếc $\Rightarrow$ bán được $1000 - 20 - 20 = 960$ chiếc
+\end{itemize}
+
+\textbf{Yêu cầu:} Tìm doanh thu khi giá mỗi tai nghe là \$255.
+
+\bigskip
+
+%----------------------------------------
+% Giải
+%----------------------------------------
+\textbf{Giải:}
+
+\subsection*{Bước 1: Xác định số lần tăng giá}
+
+Giá ban đầu: $P_0 = \$55$
+
+Giá hiện tại: $P = \$255$
+
+Mỗi lần tăng: $\Delta P = \$5$
+
+Số lần tăng giá:
+\begin{align*}
+    n &= \frac{P - P_0}{\Delta P} \\[10pt]
+    &= \frac{255 - 55}{5} \\[10pt]
+    &= \frac{200}{5} \\[10pt]
+    &= 40 \text{ (lần)}
+\end{align*}
+
+\bigskip
+
+\subsection*{Bước 2: Tính số lượng tai nghe bán được}
+
+Số lượng ban đầu: $Q_0 = 1000$ chiếc
+
+Mỗi lần tăng giá, số lượng giảm: $\Delta Q = 20$ chiếc
+
+Số lượng bán được khi giá là \$255:
+\begin{align*}
+    Q &= Q_0 - n \cdot \Delta Q \\[10pt]
+    &= 1000 - 40 \times 20 \\[10pt]
+    &= 1000 - 800 \\[10pt]
+    &= 200 \text{ (chiếc)}
+\end{align*}
+
+\bigskip
+
+\subsection*{Bước 3: Tính doanh thu}
+
+Doanh thu = Giá $\times$ Số lượng
+
+\begin{align*}
+    R &= P \times Q \\[10pt]
+    &= 255 \times 200 \\[10pt]
+    &= \$51,000
+\end{align*}
+
+\bigskip
+
+%----------------------------------------
+% Kết luận
+%----------------------------------------
+\textbf{Kết luận:} Doanh thu khi giá mỗi tai nghe là \$255 là: $\boxed{\$51,000}$
+
+\bigskip
+
+%----------------------------------------
+% Công thức tổng quát
+%----------------------------------------
+\subsection*{Phần bổ sung: Công thức tổng quát}
+
+Đặt $x$ là số lần tăng giá \$5, ta có:
+
+\begin{itemize}
+    \item Giá bán: $P(x) = 55 + 5x$ (đô la)
+    \item Số lượng bán: $Q(x) = 1000 - 20x$ (chiếc)
+    \item Doanh thu: $R(x) = P(x) \cdot Q(x)$
+\end{itemize}
+
+\begin{align*}
+    R(x) &= (55 + 5x)(1000 - 20x) \\[10pt]
+    &= 55 \cdot 1000 - 55 \cdot 20x + 5x \cdot 1000 - 5x \cdot 20x \\[10pt]
+    &= 55000 - 1100x + 5000x - 100x^2 \\[10pt]
+    &= 55000 + 3900x - 100x^2 \\[10pt]
+    &= -100x^2 + 3900x + 55000
+\end{align*}
+
+\textbf{Kiểm tra với $x = 40$:}
+\begin{align*}
+    R(40) &= -100(40)^2 + 3900(40) + 55000 \\[10pt]
+    &= -100 \cdot 1600 + 156000 + 55000 \\[10pt]
+    &= -160000 + 156000 + 55000 \\[10pt]
+    &= 51000 \quad \checkmark
+\end{align*}
+
+\bigskip
+
+%----------------------------------------
+% Bảng tóm tắt
+%----------------------------------------
+\subsection*{Bảng tóm tắt kết quả Câu 9:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Thông tin} & \textbf{Giá trị} \\
+\hline
+Giá ban đầu & \$55 \\
+\hline
+Số lượng ban đầu & 1000 chiếc \\
+\hline
+Doanh thu ban đầu & \$55,000 \\
+\hline
+Mỗi lần tăng giá & +\$5 \\
+\hline
+Mỗi lần giảm số lượng & $-20$ chiếc \\
+\hline
+Giá yêu cầu & \$255 \\
+\hline
+Số lần tăng giá & 40 lần \\
+\hline
+Số lượng bán được & 200 chiếc \\
+\hline
+\textbf{Doanh thu} & $\mathbf{\$51,000}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+%----------------------------------------
+% Bảng so sánh
+%----------------------------------------
+\subsection*{Bảng so sánh một số mức giá:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Số lần tăng ($x$)} & \textbf{Giá (\$)} & \textbf{Số lượng} & \textbf{Doanh thu (\$)} \\
+\hline
+0 & 55 & 1000 & 55,000 \\
+\hline
+1 & 60 & 980 & 58,800 \\
+\hline
+2 & 65 & 960 & 62,400 \\
+\hline
+10 & 105 & 800 & 84,000 \\
+\hline
+19 & 150 & 620 & 93,000 \\
+\hline
+20 & 155 & 600 & 93,000 \\
+\hline
+30 & 205 & 400 & 82,000 \\
+\hline
+\textbf{40} & \textbf{255} & \textbf{200} & \textbf{51,000} \\
+\hline
+50 & 305 & 0 & 0 \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+%----------------------------------------
+% Nhận xét
+%----------------------------------------
+\textbf{Nhận xét:}
+\begin{itemize}
+    \item Doanh thu đạt cực đại khi $R'(x) = 0$:
+    \begin{align*}
+        R'(x) &= -200x + 3900 = 0 \\
+        x &= \frac{3900}{200} = 19.5
+    \end{align*}
+    
+    \item Vì $x$ phải là số nguyên, nên doanh thu cực đại đạt được khi $x = 19$ hoặc $x = 20$, tương ứng với giá \$150 hoặc \$155.
+    
+    \item Doanh thu cực đại là \$93,000.
+    
+    \item Khi $x = 50$ (giá \$305), không bán được chiếc nào, doanh thu bằng 0.
+\end{itemize}
+
+\end{document}

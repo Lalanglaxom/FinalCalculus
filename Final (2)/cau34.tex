@@ -1,0 +1,232 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+
+\geometry{margin=2.5cm}
+
+\title{\textbf{BÀI TẬP GIẢI TÍCH}}
+\author{Họ và tên: .............................}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%========================================
+% CÂU 3
+%========================================
+\section*{Câu 3. Tìm đạo hàm $\dfrac{dy}{dx}$ của các hàm số sau (1.0 điểm)}
+
+\textbf{Các công thức cần nhớ:}
+\begin{itemize}
+    \item Đạo hàm căn bậc hai: $(\sqrt{x})' = \dfrac{1}{2\sqrt{x}}$
+    \item Đạo hàm thương: $\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}$
+    \item Đạo hàm hàm hợp: $(u^n)' = n \cdot u^{n-1} \cdot u'$
+\end{itemize}
+
+\bigskip
+
+%----------------------------------------
+% Câu 3a
+%----------------------------------------
+\subsection*{a) $y = \dfrac{\sqrt{x}-4}{\sqrt{x}+4}$}
+
+\textbf{Giải:}
+
+Đặt $u = \sqrt{x} - 4$ và $v = \sqrt{x} + 4$
+
+Ta có:
+\begin{align*}
+    u' &= (\sqrt{x} - 4)' = \frac{1}{2\sqrt{x}} \\[8pt]
+    v' &= (\sqrt{x} + 4)' = \frac{1}{2\sqrt{x}}
+\end{align*}
+
+Áp dụng công thức đạo hàm của thương: $\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}$
+
+\begin{align*}
+    \frac{dy}{dx} &= \frac{u'v - uv'}{v^2} \\[10pt]
+    &= \frac{\dfrac{1}{2\sqrt{x}} \cdot (\sqrt{x}+4) - (\sqrt{x}-4) \cdot \dfrac{1}{2\sqrt{x}}}{(\sqrt{x}+4)^2} \\[10pt]
+    &= \frac{\dfrac{1}{2\sqrt{x}} \left[(\sqrt{x}+4) - (\sqrt{x}-4)\right]}{(\sqrt{x}+4)^2} \\[10pt]
+    &= \frac{\dfrac{1}{2\sqrt{x}} \cdot (\sqrt{x}+4 - \sqrt{x}+4)}{(\sqrt{x}+4)^2} \\[10pt]
+    &= \frac{\dfrac{1}{2\sqrt{x}} \cdot 8}{(\sqrt{x}+4)^2} \\[10pt]
+    &= \frac{8}{2\sqrt{x} \cdot (\sqrt{x}+4)^2} \\[10pt]
+    &= \frac{4}{\sqrt{x} \cdot (\sqrt{x}+4)^2}
+\end{align*}
+
+\textbf{Kết luận:} $\dfrac{dy}{dx} = \boxed{\dfrac{4}{\sqrt{x}(\sqrt{x}+4)^2}}$
+
+\bigskip
+
+%----------------------------------------
+% Câu 3b
+%----------------------------------------
+\subsection*{b) $y = \left(\dfrac{\sqrt{x}}{10} - 1\right)^{-10}$}
+
+\textbf{Giải:}
+
+Đặt $u = \dfrac{\sqrt{x}}{10} - 1$, ta có $y = u^{-10}$
+
+\textbf{Bước 1:} Tính $u'$
+\begin{align*}
+    u &= \frac{\sqrt{x}}{10} - 1 = \frac{1}{10}\sqrt{x} - 1 \\[8pt]
+    u' &= \frac{1}{10} \cdot \frac{1}{2\sqrt{x}} = \frac{1}{20\sqrt{x}}
+\end{align*}
+
+\textbf{Bước 2:} Áp dụng công thức đạo hàm hàm hợp: $(u^n)' = n \cdot u^{n-1} \cdot u'$
+
+\begin{align*}
+    \frac{dy}{dx} &= -10 \cdot u^{-11} \cdot u' \\[10pt]
+    &= -10 \cdot \left(\frac{\sqrt{x}}{10} - 1\right)^{-11} \cdot \frac{1}{20\sqrt{x}} \\[10pt]
+    &= \frac{-10}{20\sqrt{x}} \cdot \left(\frac{\sqrt{x}}{10} - 1\right)^{-11} \\[10pt]
+    &= \frac{-1}{2\sqrt{x}} \cdot \left(\frac{\sqrt{x}}{10} - 1\right)^{-11}
+\end{align*}
+
+\textbf{Cách viết khác:}
+\begin{align*}
+    \frac{dy}{dx} &= \frac{-1}{2\sqrt{x} \cdot \left(\dfrac{\sqrt{x}}{10} - 1\right)^{11}} \\[10pt]
+    &= \frac{-1}{2\sqrt{x} \cdot \left(\dfrac{\sqrt{x} - 10}{10}\right)^{11}} \\[10pt]
+    &= \frac{-10^{11}}{2\sqrt{x} \cdot (\sqrt{x} - 10)^{11}}
+\end{align*}
+
+\textbf{Kết luận:} $\dfrac{dy}{dx} = \boxed{\dfrac{-1}{2\sqrt{x}\left(\dfrac{\sqrt{x}}{10} - 1\right)^{11}}}$
+
+\bigskip
+
+%----------------------------------------
+% Bảng tóm tắt câu 3
+%----------------------------------------
+\subsection*{Bảng tóm tắt kết quả Câu 3:}
+
+\begin{center}
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Hàm số} & \textbf{Đạo hàm $\dfrac{dy}{dx}$} \\
+\hline
+$y = \dfrac{\sqrt{x}-4}{\sqrt{x}+4}$ & $\dfrac{4}{\sqrt{x}(\sqrt{x}+4)^2}$ \\
+\hline
+$y = \left(\dfrac{\sqrt{x}}{10} - 1\right)^{-10}$ & $\dfrac{-1}{2\sqrt{x}\left(\dfrac{\sqrt{x}}{10} - 1\right)^{11}}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+%========================================
+% CÂU 4
+%========================================
+\section*{Câu 4. Tìm phương trình tiếp tuyến của đồ thị $y = 1 + 2e^x$ tại điểm có $x = 0$ (1.0 điểm)}
+
+\textbf{Công thức phương trình tiếp tuyến:}
+
+Phương trình tiếp tuyến của đồ thị hàm số $y = f(x)$ tại điểm $M(x_0, y_0)$:
+$$y - y_0 = f'(x_0)(x - x_0)$$
+
+hoặc viết dưới dạng:
+$$y = f'(x_0)(x - x_0) + y_0$$
+
+\bigskip
+
+\textbf{Giải:}
+
+Cho hàm số $y = 1 + 2e^x$ và $x_0 = 0$
+
+\bigskip
+
+\textbf{Bước 1:} Tính tọa độ tiếp điểm
+
+Tại $x_0 = 0$:
+\begin{align*}
+    y_0 &= 1 + 2e^0 \\
+    &= 1 + 2 \cdot 1 \\
+    &= 1 + 2 \\
+    &= 3
+\end{align*}
+
+Vậy tiếp điểm là $M(0, 3)$.
+
+\bigskip
+
+\textbf{Bước 2:} Tính đạo hàm $y'$
+
+\begin{align*}
+    y &= 1 + 2e^x \\
+    y' &= (1)' + (2e^x)' \\
+    &= 0 + 2e^x \\
+    &= 2e^x
+\end{align*}
+
+\bigskip
+
+\textbf{Bước 3:} Tính hệ số góc của tiếp tuyến
+
+Hệ số góc của tiếp tuyến tại $x_0 = 0$:
+\begin{align*}
+    k = y'(0) &= 2e^0 \\
+    &= 2 \cdot 1 \\
+    &= 2
+\end{align*}
+
+\bigskip
+
+\textbf{Bước 4:} Viết phương trình tiếp tuyến
+
+Áp dụng công thức phương trình tiếp tuyến:
+\begin{align*}
+    y - y_0 &= k(x - x_0) \\
+    y - 3 &= 2(x - 0) \\
+    y - 3 &= 2x \\
+    y &= 2x + 3
+\end{align*}
+
+\bigskip
+
+\textbf{Kết luận:} Phương trình tiếp tuyến của đồ thị $y = 1 + 2e^x$ tại điểm có $x = 0$ là:
+$$\boxed{y = 2x + 3}$$
+
+\bigskip
+
+%----------------------------------------
+% Bảng tóm tắt câu 4
+%----------------------------------------
+\subsection*{Bảng tóm tắt kết quả Câu 4:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Thông tin} & \textbf{Giá trị} \\
+\hline
+Hàm số & $y = 1 + 2e^x$ \\
+\hline
+Hoành độ tiếp điểm & $x_0 = 0$ \\
+\hline
+Tung độ tiếp điểm & $y_0 = 3$ \\
+\hline
+Tiếp điểm & $M(0, 3)$ \\
+\hline
+Đạo hàm & $y' = 2e^x$ \\
+\hline
+Hệ số góc tiếp tuyến & $k = y'(0) = 2$ \\
+\hline
+\textbf{Phương trình tiếp tuyến} & $\mathbf{y = 2x + 3}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+\textbf{Nhận xét:}
+\begin{itemize}
+    \item Tiếp tuyến có hệ số góc $k = 2 > 0$ nên tiếp tuyến là đường thẳng đi lên từ trái sang phải.
+    \item Tiếp tuyến cắt trục $Oy$ tại điểm $(0, 3)$ chính là tiếp điểm.
+    \item Tiếp tuyến cắt trục $Ox$ tại điểm $\left(-\dfrac{3}{2}, 0\right)$.
+\end{itemize}
+
+\end{document}

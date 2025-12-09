@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\section*{Câu 7. Xét sự hội tụ của chuỗi (1.0 điểm)}
+
+\textbf{Cho:} $a_1, a_2, a_3, \ldots, a_n, \ldots$ là các số thực thỏa mãn:
+\begin{itemize}
+    \item $a_n > 0, \, n \in \mathbb{Z}^+$
+    \item $a_1 \geq a_2 \geq a_3 \geq \cdots \geq a_n \geq \cdots$
+    \item Chuỗi $a_2 + a_4 + a_8 + a_{16} + \cdots + a_{2^n} + \cdots$ phân kỳ
+\end{itemize}
+
+\textbf{Yêu cầu:} Xác định sự hội tụ hay phân kỳ của chuỗi:
+$$S = a_1 + \frac{a_2}{2} + \frac{a_3}{3} + \frac{a_4}{4} + \cdots + \frac{a_n}{n} + \cdots = \sum_{n=1}^{\infty} \frac{a_n}{n}$$
+
+\bigskip
+\subsection*{Tiêu chuẩn so sánh 1}
+
+\textbf{Định lý:} Cho hai chuỗi số dương $\displaystyle\sum_{n=1}^{\infty} u_n$ và $\displaystyle\sum_{n=1}^{\infty} v_n$ với $u_n > 0$, $v_n > 0$ với mọi $n$.
+
+Nếu tồn tại $N \in \mathbb{N}$ sao cho $u_n \geq v_n$ với mọi $n \geq N$, thì:
+\begin{itemize}
+    \item Nếu $\displaystyle\sum_{n=1}^{\infty} v_n$ \textbf{phân kỳ} thì $\displaystyle\sum_{n=1}^{\infty} u_n$ cũng \textbf{phân kỳ}.
+    \item Nếu $\displaystyle\sum_{n=1}^{\infty} u_n$ \textbf{hội tụ} thì $\displaystyle\sum_{n=1}^{\infty} v_n$ cũng \textbf{hội tụ}.
+\end{itemize}
+\textbf{Cho:} $a_n > 0$, $a_1 \geq a_2 \geq a_3 \geq \cdots$, và chuỗi $a_2 + a_4 + a_8 + \cdots$ phân kỳ.
+
+
+\bigskip
+
+\subsection*{Giải}
+
+\bigskip
+
+Khai triển chuỗi cần tìm:
+$$S = a_1 + \frac{a_2}{2} + \frac{a_3}{3} + \frac{a_4}{4} + \frac{a_5}{5} + \cdots + \frac{a_8}{8} + \cdots$$
+
+Ta nhóm các số hạng lại thành từng nhóm (theo lũy thừa của 2) và đánh giá \textbf{chặn dưới} (thay thế các số hạng trong nhóm bằng số hạng nhỏ nhất của nhóm đó):
+
+\bigskip
+
+\begin{itemize}
+    \item \textbf{Nhóm 1} (chỉ có $n = 2$): Giữ nguyên $\dfrac{a_2}{2}$.
+    
+    \bigskip
+    
+    \item \textbf{Nhóm 2} (từ $n = 3$ đến 4):
+    $$\frac{a_3}{3} + \frac{a_4}{4} \geq \frac{a_4}{4} + \frac{a_4}{4} = \frac{2a_4}{4} = \frac{a_4}{2}$$
+    
+    \textit{(Giải thích: Vì dãy giảm nên $a_3 \geq a_4$ và mẫu số $3 < 4$, nên $\dfrac{a_3}{3} > \dfrac{a_4}{4}$)}
+    
+    \bigskip
+    
+    \item \textbf{Nhóm 3} (từ $n = 5$ đến 8):
+    $$\frac{a_5}{5} + \frac{a_6}{6} + \frac{a_7}{7} + \frac{a_8}{8} \geq \frac{a_8}{8} + \frac{a_8}{8} + \frac{a_8}{8} + \frac{a_8}{8} = \frac{4a_8}{8} = \frac{a_8}{2}$$
+    
+    \bigskip
+    
+    \item \textbf{Nhóm tổng quát} (từ $2^{k-1} + 1$ đến $2^k$): Có $2^{k-1}$ số hạng, số hạng nhỏ nhất là $\dfrac{a_{2^k}}{2^k}$.
+    
+    $$\text{Tổng nhóm} \geq 2^{k-1} \cdot \frac{a_{2^k}}{2^k} = \frac{a_{2^k}}{2}$$
+\end{itemize}
+
+\bigskip
+
+\textbf{Tổng hợp lại:}
+
+\begin{align*}
+    S &= a_1 + \frac{a_2}{2} + \left(\frac{a_3}{3} + \frac{a_4}{4}\right) + \left(\frac{a_5}{5} + \cdots + \frac{a_8}{8}\right) + \cdots \\[12pt]
+    S &\geq a_1 + \frac{1}{2}a_2 + \frac{1}{2}a_4 + \frac{1}{2}a_8 + \frac{1}{2}a_{16} + \cdots \\[12pt]
+    S &\geq a_1 + \frac{1}{2}\underbrace{\left(a_2 + a_4 + a_8 + \cdots\right)}_{\text{Chuỗi phân kỳ theo đề bài}}
+\end{align*}
+
+\bigskip
+
+\textbf{Kết luận:}
+
+Vì chuỗi $(a_2 + a_4 + a_8 + \cdots)$ phân kỳ (tiến tới dương vô cùng), nên tổng $S$ lớn hơn nó cũng phải tiến tới dương vô cùng.
+
+$$\Rightarrow \boxed{\text{Chuỗi phân kỳ.}}$$
+
+\end{document}

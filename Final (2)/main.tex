@@ -1,0 +1,299 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+
+\geometry{margin=2.5cm}
+
+\title{\textbf{BÀI TẬP GIẢI TÍCH}}
+\author{Họ và tên: .............................}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%========================================
+% CÂU 1
+%========================================
+\section*{Câu 1. Xác định tính chẵn lẻ của hàm số (1.0 điểm)}
+
+\textbf{Lý thuyết:}
+\begin{itemize}
+    \item Hàm chẵn: $f(-x) = f(x)$ với mọi $x$ trong tập xác định
+    \item Hàm lẻ: $f(-x) = -f(x)$ với mọi $x$ trong tập xác định
+\end{itemize}
+
+\bigskip
+
+%----------------------------------------
+% Câu 1a
+%----------------------------------------
+\subsection*{a) $f(x) = x^2 + x$}
+
+\textbf{Giải:}
+
+Ta có:
+\begin{align*}
+    f(-x) &= (-x)^2 + (-x) \\
+    &= x^2 - x
+\end{align*}
+
+So sánh với $f(x)$ và $-f(x)$:
+\begin{align*}
+    f(x) &= x^2 + x \\
+    -f(x) &= -(x^2 + x) = -x^2 - x
+\end{align*}
+
+Nhận xét:
+\begin{itemize}
+    \item $f(-x) = x^2 - x \neq x^2 + x = f(x)$ $\Rightarrow$ Không phải hàm chẵn
+    \item $f(-x) = x^2 - x \neq -x^2 - x = -f(x)$ $\Rightarrow$ Không phải hàm lẻ
+\end{itemize}
+
+\textbf{Kết luận:} Hàm số $f(x) = x^2 + x$ \textbf{không chẵn không lẻ}.
+
+\bigskip
+
+%----------------------------------------
+% Câu 1b
+%----------------------------------------
+\subsection*{b) $f(x) = x^3 + x$}
+
+\textbf{Giải:}
+
+Ta có:
+\begin{align*}
+    f(-x) &= (-x)^3 + (-x) \\
+    &= -x^3 - x \\
+    &= -(x^3 + x) \\
+    &= -f(x)
+\end{align*}
+
+Vì $f(-x) = -f(x)$ với mọi $x \in \mathbb{R}$.
+
+\textbf{Kết luận:} Hàm số $f(x) = x^3 + x$ là \textbf{hàm lẻ}.
+
+\bigskip
+
+%----------------------------------------
+% Câu 1c
+%----------------------------------------
+\subsection*{c) $f(x) = \dfrac{4}{x^4 - 4}$}
+
+\textbf{Giải:}
+
+Tập xác định: $D = \mathbb{R} \setminus \{-\sqrt{2}, \sqrt{2}\}$
+
+Nhận xét: Nếu $x \in D$ thì $-x \in D$ (tập xác định đối xứng qua gốc tọa độ).
+
+Ta có:
+\begin{align*}
+    f(-x) &= \frac{4}{(-x)^4 - 4} \\
+    &= \frac{4}{x^4 - 4} \\
+    &= f(x)
+\end{align*}
+
+Vì $f(-x) = f(x)$ với mọi $x \in D$.
+
+\textbf{Kết luận:} Hàm số $f(x) = \dfrac{4}{x^4 - 4}$ là \textbf{hàm chẵn}.
+
+\bigskip
+
+%----------------------------------------
+% Câu 1d
+%----------------------------------------
+\subsection*{d) $f(x) = \dfrac{x^3}{x^4 - 4}$}
+
+\textbf{Giải:}
+
+Tập xác định: $D = \mathbb{R} \setminus \{-\sqrt{2}, \sqrt{2}\}$
+
+Nhận xét: Nếu $x \in D$ thì $-x \in D$ (tập xác định đối xứng qua gốc tọa độ).
+
+Ta có:
+\begin{align*}
+    f(-x) &= \frac{(-x)^3}{(-x)^4 - 4} \\
+    &= \frac{-x^3}{x^4 - 4} \\
+    &= -\frac{x^3}{x^4 - 4} \\
+    &= -f(x)
+\end{align*}
+
+Vì $f(-x) = -f(x)$ với mọi $x \in D$.
+
+\textbf{Kết luận:} Hàm số $f(x) = \dfrac{x^3}{x^4 - 4}$ là \textbf{hàm lẻ}.
+
+\bigskip
+
+%----------------------------------------
+% Bảng tóm tắt câu 1
+%----------------------------------------
+\subsection*{Bảng tóm tắt kết quả Câu 1:}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Hàm số} & \textbf{Kết luận} \\
+\hline
+$f(x) = x^2 + x$ & Không chẵn không lẻ \\
+\hline
+$f(x) = x^3 + x$ & Hàm lẻ \\
+\hline
+$f(x) = \dfrac{4}{x^4-4}$ & Hàm chẵn \\
+\hline
+$f(x) = \dfrac{x^3}{x^4-4}$ & Hàm lẻ \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+%========================================
+% CÂU 2
+%========================================
+\section*{Câu 2. Tính giới hạn $\displaystyle\lim \frac{555}{x^2-25}$ (1.0 điểm)}
+
+\textbf{Phân tích:} Ta có $x^2 - 25 = (x-5)(x+5)$
+
+Hàm số có hai điểm gián đoạn tại $x = 5$ và $x = -5$.
+
+\bigskip
+
+%----------------------------------------
+% Câu 2a
+%----------------------------------------
+\subsection*{a) $\displaystyle\lim_{x \to 5^+} \frac{555}{x^2-25}$}
+
+\textbf{Giải:}
+
+\begin{align*}
+    \lim_{x \to 5^+} \frac{555}{x^2-25} &= \lim_{x \to 5^+} \frac{555}{(x-5)(x+5)}
+\end{align*}
+
+Khi $x \to 5^+$:
+\begin{itemize}
+    \item Tử số: $555 > 0$ (hằng số dương)
+    \item $(x-5) \to 0^+$ (dương, tiến về 0 từ bên phải)
+    \item $(x+5) \to 10 > 0$
+\end{itemize}
+
+Do đó:
+\begin{align*}
+    \lim_{x \to 5^+} \frac{555}{(x-5)(x+5)} &= \frac{555}{0^+ \cdot 10} = \frac{555}{0^+} = +\infty
+\end{align*}
+
+\textbf{Kết luận:} $\displaystyle\lim_{x \to 5^+} \frac{555}{x^2-25} = \boxed{+\infty}$
+
+\bigskip
+
+%----------------------------------------
+% Câu 2b
+%----------------------------------------
+\subsection*{b) $\displaystyle\lim_{x \to 5^-} \frac{555}{x^2-25}$}
+
+\textbf{Giải:}
+
+\begin{align*}
+    \lim_{x \to 5^-} \frac{555}{x^2-25} &= \lim_{x \to 5^-} \frac{555}{(x-5)(x+5)}
+\end{align*}
+
+Khi $x \to 5^-$:
+\begin{itemize}
+    \item Tử số: $555 > 0$ (hằng số dương)
+    \item $(x-5) \to 0^-$ (âm, tiến về 0 từ bên trái)
+    \item $(x+5) \to 10 > 0$
+\end{itemize}
+
+Do đó:
+\begin{align*}
+    \lim_{x \to 5^-} \frac{555}{(x-5)(x+5)} &= \frac{555}{0^- \cdot 10} = \frac{555}{0^-} = -\infty
+\end{align*}
+
+\textbf{Kết luận:} $\displaystyle\lim_{x \to 5^-} \frac{555}{x^2-25} = \boxed{-\infty}$
+
+\bigskip
+
+%----------------------------------------
+% Câu 2c
+%----------------------------------------
+\subsection*{c) $\displaystyle\lim_{x \to -5^+} \frac{555}{x^2-25}$}
+
+\textbf{Giải:}
+
+\begin{align*}
+    \lim_{x \to -5^+} \frac{555}{x^2-25} &= \lim_{x \to -5^+} \frac{555}{(x-5)(x+5)}
+\end{align*}
+
+Khi $x \to -5^+$:
+\begin{itemize}
+    \item Tử số: $555 > 0$ (hằng số dương)
+    \item $(x-5) \to -10 < 0$
+    \item $(x+5) \to 0^+$ (dương, tiến về 0 từ bên phải)
+\end{itemize}
+
+Do đó:
+\begin{align*}
+    \lim_{x \to -5^+} \frac{555}{(x-5)(x+5)} &= \frac{555}{(-10) \cdot 0^+} = \frac{555}{0^-} = -\infty
+\end{align*}
+
+\textbf{Kết luận:} $\displaystyle\lim_{x \to -5^+} \frac{555}{x^2-25} = \boxed{-\infty}$
+
+\bigskip
+
+%----------------------------------------
+% Câu 2d
+%----------------------------------------
+\subsection*{d) $\displaystyle\lim_{x \to -5^-} \frac{555}{x^2-25}$}
+
+\textbf{Giải:}
+
+\begin{align*}
+    \lim_{x \to -5^-} \frac{555}{x^2-25} &= \lim_{x \to -5^-} \frac{555}{(x-5)(x+5)}
+\end{align*}
+
+Khi $x \to -5^-$:
+\begin{itemize}
+    \item Tử số: $555 > 0$ (hằng số dương)
+    \item $(x-5) \to -10 < 0$
+    \item $(x+5) \to 0^-$ (âm, tiến về 0 từ bên trái)
+\end{itemize}
+
+Do đó:
+\begin{align*}
+    \lim_{x \to -5^-} \frac{555}{(x-5)(x+5)} &= \frac{555}{(-10) \cdot 0^-} = \frac{555}{0^+} = +\infty
+\end{align*}
+
+\textbf{Kết luận:} $\displaystyle\lim_{x \to -5^-} \frac{555}{x^2-25} = \boxed{+\infty}$
+
+\bigskip
+
+%----------------------------------------
+% Bảng tóm tắt câu 2
+%----------------------------------------
+\subsection*{Bảng tóm tắt kết quả Câu 2:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Giới hạn} & $x \to 5^+$ & $x \to 5^-$ & $x \to -5^+$ & $x \to -5^-$ \\
+\hline
+$\displaystyle\lim \frac{555}{x^2-25}$ & $+\infty$ & $-\infty$ & $-\infty$ & $+\infty$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+\textbf{Nhận xét:}
+\begin{itemize}
+    \item Tại $x = 5$: Giới hạn trái và giới hạn phải khác nhau nên $\displaystyle\lim_{x \to 5} \frac{555}{x^2-25}$ không tồn tại.
+    \item Tại $x = -5$: Giới hạn trái và giới hạn phải khác nhau nên $\displaystyle\lim_{x \to -5} \frac{555}{x^2-25}$ không tồn tại.
+    \item Đường thẳng $x = 5$ và $x = -5$ là các đường tiệm cận đứng của đồ thị hàm số.
+\end{itemize}
+
+\end{document}
